@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 	
 	set_time_limit(0);
 	
-	$conn  = new mysqli("db-mysql-blr1-82262-do-user-13433417-0.i.db.ondigitalocean.com:25060","doadmin","AVNS_8JrUC6kgyaIWXPq5GNC","defaultdb");
+	$conn  = new mysqli("","","","defaultdb");
 	// Check connection
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
