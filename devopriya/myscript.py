@@ -27,10 +27,10 @@ def llm_langchain(string):
 import mysql.connector as cnctr
 
 
-connx = cnctr.connect(host='',port='25060', username='doadmin', password='', database='defaultdb')
+connx = cnctr.connect(host='',port='25060', username='', password='', database='defaultdb')
 crsr = connx.cursor()
 
-connxn = cnctr.connect(host='',port='25060', username='doadmin', password='', database='defaultdb')
+connxn = cnctr.connect(host='',port='25060', username='', password='', database='defaultdb')
 
   
 insert_crsr = connxn.cursor(buffered=True)
