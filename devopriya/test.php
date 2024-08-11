@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("db-mysql-blr1-82262-do-user-13433417-0.i.db.ondigitalocean.com:25060","doadmin","AVNS_8JrUC6kgyaIWXPq5GNC","defaultdb");
+$conn = new mysqli("","","","defaultdb");
 $result = $conn->query("select distinct `categories` from categories_for_prompt");
 
 echo "<html>";
