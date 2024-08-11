@@ -1,0 +1,24 @@
+create table defaultdb.students (`Employee ID` varchar(200) not null primary key, `Employee Name` varchar(200), 
+`Indian Phone Number` varchar(100) unique, `Company Email ID` varchar(100) unique, 
+`Personal Email ID` varchar(200) unique, `Father's Name` varchar(200), 
+`Mother's Name` varchar(200), `Sibling Name` varchar(200), 
+`Reporting Boss Name` varchar(200), `Ongoing Projects` varchar(200), 
+`Hobbies` varchar(200), `Date of Birth` varchar(20), `Recent Official Visits` varchar(1000),
+`Leaves Availed` varchar(20), `Leaves Remaining` varchar(20), 
+`Education Qualification` varchar(200), `Institute` varchar(200),
+`Type of Mobile Phone (Official)` varchar(100), `Type of Mobile Phone (Personal)` varchar(200)
+);
+
+create table categories_for_prompt(category_id varchar(100) not null primary key, categories varchar(100), sub_categories varchar(100));
+
+select * from categories_for_prompt;
+
+select distinct `categories` from categories_for_prompt;
+
+insert into categories_for_prompt values('1', 'University/School/College', 'Email for checking the result');
+insert into categories_for_prompt values('2', 'University/School/College', 'Email for updating the credentials of student portal');
+insert into categories_for_prompt values('3', 'University/School/College', 'Email from faculty');
+
+SET sql_require_primary_key = 0;
+create table response_for_chatbot (categories varchar(100), sub_categories varchar(100), prompt varchar(10000), ingestion_time timestamp );
+
