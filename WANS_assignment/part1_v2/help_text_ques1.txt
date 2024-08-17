@@ -1,0 +1,16 @@
+## Run the below commands in terminal first to install some of the libraries
+# To install python3 pip
+sudo apt install python3-pip
+
+# To install venv for virtual environment
+sudo apt install python3-venv
+
+# create virtual environment named wans
+python3 -m venv .wans
+
+# Activate the virtual environment
+source .wans/bin/activate
+
+## Install crypto libraries
+python3 -m pip install pycryptodome
+
