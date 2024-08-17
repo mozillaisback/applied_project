@@ -1,3 +1,4 @@
+## Importing the basic libraries
 import os
 from time import sleep
 import sys
@@ -11,7 +12,7 @@ from base64 import b64encode, b64decode
 
 
 
-
+## Function which performs the client side function
 def start_client():
     from clien_side_key_exchange import client_side_exchange
     server_public_key, client_private_key = client_side_exchange()
