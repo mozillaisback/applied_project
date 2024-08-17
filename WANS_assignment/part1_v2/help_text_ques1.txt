@@ -12,6 +12,4 @@ python3 -m venv .wans
 source .wans/bin/activate
 
 ## Install crypto libraries
-python3 -m pip install pycryptodome
-
-pip install pycrypto
+sudo pip3 install pycryptodome
