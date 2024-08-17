@@ -1,3 +1,4 @@
+## Loading the basic libraries
 import os
 from time import sleep
 import sys
@@ -8,13 +9,14 @@ from Crypto.Signature import pkcs1_15, PKCS1_v1_5
 from Crypto.Hash import SHA256
 from base64 import b64encode, b64decode
 
+## Creating a function to run the shell commands
 def exec_shell_cmd(cmd):
     import subprocess
     subprocess.Popen(cmd, shell=True)
     return 0
 
 
-
+## START SERVER Function this consists of server side operations that is performed
 def start_server():
 
     from server_side_key_exchange import server_key_exchange
@@ -22,6 +24,7 @@ def start_server():
     client_public_key, server_private_key = server_key_exchange()
 
     # SOCKET CREATION
+    # Port 11564 is used to run the server socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_socket.bind(('localhost', 11564))
