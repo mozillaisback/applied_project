@@ -1,9 +1,12 @@
+## Importing the libraries
 import os
 from time import sleep
 import sys
 import socket
 from Crypto.PublicKey import RSA
 
+
+## Run the shell commands in python
 def exec_shell_cmd(cmd):
     import subprocess
     subprocess.Popen(cmd, shell=True)
@@ -11,7 +14,7 @@ def exec_shell_cmd(cmd):
 
 
 
-
+## This function generates the server private key and public key
 def generate_server_keys():
 
 #    exec_shell_cmd('pwd')
@@ -29,7 +32,7 @@ def generate_server_keys():
     #This command generates the corresponding public key and saves it in the file `server_public_key.pem`.
     return path
 
-
+## This function sends the server's public key and receives client's public key
 def server_key_exchange():
     path = generate_server_keys()
 	# Load server RSA keys generated with OpenSSL
