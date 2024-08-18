@@ -1,3 +1,12 @@
+## ************************************GROUP 6 ASSIGNMENT************************************************
+## ************************************CHAKRAVORTY DEVOPRIYA DEVASHISH************************************************
+## ************************************SUMIT MUKHERJEE****************************************************************
+## ************************************SOUAGATA DUTTA*****************************************************************
+## ************************************VINEET SINHA*******************************************************************
+## ************************************VIJAY KUMAR********************************************************************
+## ************************************SUNIL SINGH********************************************************************
+
+
 import dns.resolver  # Import the DNS resolver from the 'dnspython' library for querying DNS records.
 import smtplib  # Import the 'smtplib' library for sending email and handling SMTP operations.
 import socket  # Import the 'socket' library for handling network-related operations, like timeouts.
