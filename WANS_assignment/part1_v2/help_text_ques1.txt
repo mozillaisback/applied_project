@@ -27,13 +27,14 @@ THESE FILE GENERATES THE SERVER SIDE PRIVATE AND PUBLIC KEY
 AND THEN RECEIVES THE CLIENT SIDE PUBLIC KEY FROM CLIENT
 AND SEND THE SERVER SIDE PUBLIC KEY TO CLEINT
 
-## Main code 
+## How to run the code
 server.py ==> execute by running the below code
               python3 server.py
 
 client.py ==> execute by running the below code
               python3 client.py
 
+In one terminal run server.py, in another terminal run client.py
 
 
 ## HOW THIS PROTOCOL WORKS
