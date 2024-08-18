@@ -83,21 +83,21 @@ def start_client():
     print("===============MESSAGE ", message, "\n")
     
     # Encrypt the message using the session key
-    print("===============STEP1a\n")
+    #print("===============STEP1a\n")
     cipher_aes = AES.new(session_key, AES.MODE_EAX)
-    print("===============STEP1b\n")
+    #print("===============STEP1b\n")
     nonce = cipher_aes.nonce 
-    print("===============NONCE ", nonce, "\n")
+    #print("===============NONCE ", nonce, "\n")
     encoded_message = message.encode("utf-8")
-    print("===============EM ", encoded_message, "\n")
+    #print("===============EM ", encoded_message, "\n")
     ciphertext, tag = cipher_aes.encrypt_and_digest(encoded_message)
-    print("===============STEP1c\n")
+    #print("===============STEP1c\n")
     encrypted_message = nonce + ciphertext
     
 
     #sending encrypted message
     client_socket.sendall(encrypted_message)
-    print("==============ENCRYPTED MESSAGE ", encrypted_message, "\n")
+    #print("==============ENCRYPTED MESSAGE ", encrypted_message, "\n")
 #    print("\nEncrypted message is of ", sys.getsizeof(encrypted_message), " bytes!!!!")
     # Sign the message
     h = SHA256.new(message.encode('utf-8'))
@@ -109,14 +109,14 @@ def start_client():
     #client_socket.sendall(encrypted_message)
     client_socket.sendall(signature)
 #    print("\nSignature is of ", sys.getsizeof(signature), " bytes!!!!")
-    print("===========CLIENT===============", signature, "\n")
+    #print("===========CLIENT===============", signature, "\n")
 #    print("\nSignature has been sent!!!!")
 
     
     
     client_close = "CLOSE!!!!"
     client_socket.sendall(client_close.encode("utf-8"))
-    print("\n")
+    print("\n===========CLIENT CLOSE===============")
      
     client_socket.close()
     del client_socket
