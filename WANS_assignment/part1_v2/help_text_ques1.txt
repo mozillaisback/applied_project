@@ -15,4 +15,18 @@ source .wans/bin/activate
 sudo pip3 install pycryptodome
 
 
-There 
+## clien_side_key_exchange.py
+This file is important to generate and send the keys
+
+
+## server_side_key_exchange.py
+This file is important to generate and send the keys
+
+## Main code 
+server.py ==> execute by running the below code
+              python3 server.py
+
+client.py ==> execute by running the below code
+              python3 client.py
+
+
