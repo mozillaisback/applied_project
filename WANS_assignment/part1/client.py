@@ -54,9 +54,9 @@ def start_client():
     server_public_key = RSA.import_key(client_socket.recv(4096))
     
     # Send client's public key to the server
-    client_socket.sendall(client_public_key.export_key())
+    # client_socket.sendall(client_public_key.export_key())
 #    print("\nPublic key is of ", sys.getsizeof(client_public_key), " bytes!!!!")
-    print("\nPublic key has been sent to server!!!!")
+    # print("\nPublic key has been sent to server!!!!")
     
     # Generate AES session key
     session_key = os.urandom(16)
